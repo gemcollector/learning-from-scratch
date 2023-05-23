@@ -1,0 +1,31 @@
+
+physics_engine: "physx"
+pipeline: "gpu"
+sim_device: "cuda:0"
+rl_device: "cuda:0"
+graphics_device_id: 0
+num_gpus: 1
+seed: 3
+agent_name: FrankaPickPixels
+test: False
+resume: 0
+DA: False
+normalize: True
+clip_observations: 5
+drac: False
+use_convnet: False
+is_image: False
+
+logdir: /home/yzc/mvp/logs/${now:%Y.%m.%d}/${agent_name}/seed=${seed}_${now:%H%M%S}
+cptdir: ""
+headless: True
+
+defaults:
+  - task: FrankaPickPixels
+  - train: ${task}
+  - hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .
