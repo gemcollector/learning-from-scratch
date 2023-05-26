@@ -4,6 +4,7 @@ This is the repo of the paper: [On Pre-Training for Visuo-Motor Control: Revisit
 
 
 ## Setup
+Our code is based on the [isaacgym](https://developer.nvidia.com/isaac-gym) and the repo of [Masked Visual Pre-training for Motor Control](https://github.com/ir413/mvp).
 - Create a conda environment:
 ```
 conda create -n mvp python=3.7
@@ -11,8 +12,8 @@ conda activate mvp
 ```
 We implement the code based on Ubuntu 20.04, and Tesla A40 or A100 GPUs.
 - Install the Preview 3 isaac gym version. 
-  - download issacgym from https://developer.nvidia.com/isaac-gym/download
-  - For anaconda users, there  some installing tips in `isaacgym/docs/install.html` for dealing with some issues (e.g., `libpython3.7`).
+  - download issacgym from https://developer.nvidia.com/isaac-gym/download, and follow the instructions to install it.
+  - For anaconda users, there  are some installing tips in `isaacgym/docs/install.html` for handling potential issues (e.g., `libpython3.7`).
   
 - Install MVP.
     - `pip install -r requirements.txt`
@@ -20,6 +21,7 @@ We implement the code based on Ubuntu 20.04, and Tesla A40 or A100 GPUs.
 - Install the Pytorch version (1.12.1)
     - `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116`
   
+
 
 ## LfS
 If you want reproduce the results of LfS, just run the following commands:
@@ -40,6 +42,11 @@ For R3M, we can just follow the setup from the official link:
 
 For PVR, we use the `moco_aug.pth.tar` from the official link:
 `https://github.com/sparisi/pvr_habitat/releases/download/models/moco_aug.pth.tar`
+
+For MVP, we choose `vits-mae-hoi` as the pretraiend model, and it can be downloaded from:
+```
+https://github.com/ir413/mvp
+```
 
 And change the line of 135 in `actor_critic.py` to your own model path.
 

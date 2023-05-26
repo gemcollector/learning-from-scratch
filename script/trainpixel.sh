@@ -9,8 +9,8 @@ python tools/train.py \
         task=${task_name} \
         agent_name=${agent_name} \
         seed=55 \
-        sim_device="cuda:7" \
-        rl_device="cuda:7" \
+        sim_device="cuda:0" \
+        rl_device="cuda:0" \
         train.encoder.name=${encoder_name} \
         train.encoder.pretrain_dir=${pretrain_dir]} \
         train.encoder.pretrain_type=hoi \

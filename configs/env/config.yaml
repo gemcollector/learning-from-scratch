@@ -14,7 +14,7 @@ normalize: True
 clip_observations: 5
 drac: False
 
-logdir: /home/yzc/mvp/logs/${now:%Y.%m.%d}/${agent_name}/seed=${seed}_${now:%H%M%S}
+logdir: logs/${now:%Y.%m.%d}/${agent_name}/seed=${seed}_${now:%H%M%S}
 cptdir: ""
 headless: True
 

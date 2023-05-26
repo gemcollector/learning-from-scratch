@@ -7,8 +7,8 @@ python tools/train.py \
         task=${task_name} \
         agent_name=${agent_name} \
         seed=5 \
-        sim_device="cuda:5" \
-        rl_device="cuda:5" \
+        sim_device="cuda:0" \
+        rl_device="cuda:0" \
         train.encoder.pretrain_dir=${pretrain_dir} \
         train.encoder.pretrain_type=none \
         train.encoder.freeze=False \

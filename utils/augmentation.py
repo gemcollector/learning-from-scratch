@@ -2,7 +2,6 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import kornia
 
 class RandomShiftsAug(nn.Module):
     def __init__(self, pad):
@@ -38,11 +37,6 @@ class RandomShiftsAug(nn.Module):
                              align_corners=False)
 
 
-def random_shift(imgs, pad=4):
-    """Vectorized random shift, imgs: (B,C,H,W), pad: #pixels"""
-    _,_,h,w = imgs.shape
-    imgs = F.pad(imgs, (pad, pad, pad, pad), mode='replicate')
-    return kornia.augmentation.RandomCrop((h, w))(imgs)
 
 
 def view_as_windows_cuda(x, window_shape):

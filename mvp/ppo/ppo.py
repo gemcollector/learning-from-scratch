@@ -18,7 +18,6 @@ from torch.utils.tensorboard import SummaryWriter
 
 from mvp.ppo import RolloutStorage
 from utils.augmentation import RandomShiftsAug
-from utils.augmentation import random_shift, random_crop
 import copy
 
 class PPO:

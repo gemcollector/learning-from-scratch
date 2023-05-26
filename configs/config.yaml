@@ -16,7 +16,7 @@ drac: False
 use_convnet: False
 is_image: False
 
-logdir: /home/yzc/mvp/logs/${now:%Y.%m.%d}/${agent_name}/seed=${seed}_${now:%H%M%S}
+logdir: logs/${now:%Y.%m.%d}/${agent_name}/seed=${seed}_${now:%H%M%S}
 cptdir: ""
 headless: True
 
