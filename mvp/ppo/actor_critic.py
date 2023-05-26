@@ -9,7 +9,10 @@ import torch
 import torch.nn as nn
 import copy
 import torchvision.transforms as T
-import r3m
+try:
+    import r3m
+except:
+    pass
 import torchvision.models as models
 from torch.distributions import MultivariateNormal
 from utils.moco_load import UberModel, moco_conv3_compressed, moco_conv4_compressed, moco_conv5
