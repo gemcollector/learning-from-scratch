@@ -10,16 +10,16 @@ Our code is based on the [isaacgym](https://developer.nvidia.com/isaac-gym) and 
 conda create -n mvp python=3.7
 conda activate mvp
 ```
-We implement the code based on Ubuntu 20.04, and Tesla A40 or A100 GPUs.
-- Install the Preview 3 isaac gym version. 
+- Install Pytorch:
+    - `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116`
+- Install the Preview 3 isaac gym version:
   - download issacgym from https://developer.nvidia.com/isaac-gym/download, and follow the instructions to install it.
   - For anaconda users, there  are some installing tips in `isaacgym/docs/install.html` for handling potential issues (e.g., `libpython3.7`).
   
-- Install MVP.
+- Install MVP:
     - `pip install -r requirements.txt`
     - `pip install -e .`
-- Install the Pytorch version (1.12.1)
-    - `pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116`
+
   
 
 
@@ -48,7 +48,7 @@ For MVP, we choose `vits-mae-hoi` as the pretraiend model, and it can be downloa
 https://github.com/ir413/mvp
 ```
 
-And change the line of 135 in `actor_critic.py` to your own model path.
+Besdies, you should change the line of 135 in `actor_critic.py` to your own model path.
 
 
 ## Off-policy 
